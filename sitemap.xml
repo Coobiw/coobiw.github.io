@@ -2,143 +2,143 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://coobiw.github.io/event/example/</loc>
+    <loc>http://localhost:1313/event/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/event/</loc>
+    <loc>http://localhost:1313/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/chart-understanding/</loc>
+    <loc>http://localhost:1313/tags/chart-understanding/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication/chartmoe/</loc>
+    <loc>http://localhost:1313/publication/chartmoe/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/mllm/</loc>
+    <loc>http://localhost:1313/tags/mllm/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/moe-in-downstream-tasks/</loc>
+    <loc>http://localhost:1313/tags/moe-in-downstream-tasks/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication_types/paper-conference/</loc>
+    <loc>http://localhost:1313/publication_types/paper-conference/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication_types/</loc>
+    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication/</loc>
+    <loc>http://localhost:1313/publication/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/project/aria/</loc>
+    <loc>http://localhost:1313/project/aria/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/native-multimodal-moe/</loc>
+    <loc>http://localhost:1313/tags/native-multimodal-moe/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/navit/</loc>
+    <loc>http://localhost:1313/tags/navit/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/pretrain--sft/</loc>
+    <loc>http://localhost:1313/tags/pretrain--sft/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/project/</loc>
+    <loc>http://localhost:1313/project/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication/aria/</loc>
+    <loc>http://localhost:1313/publication/aria/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/multimodal-native-moe/</loc>
+    <loc>http://localhost:1313/tags/multimodal-native-moe/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication/trivqa/</loc>
+    <loc>http://localhost:1313/publication/trivqa/</loc>
     <lastmod>2024-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/multimodal-model-for-ai-generated-video-quality-assessment/</loc>
+    <loc>http://localhost:1313/tags/multimodal-model-for-ai-generated-video-quality-assessment/</loc>
     <lastmod>2024-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/publication/ipiqa/</loc>
+    <loc>http://localhost:1313/publication/ipiqa/</loc>
     <lastmod>2024-02-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/multimodal-model-for-ai-generated-image-quality-assessment/</loc>
+    <loc>http://localhost:1313/tags/multimodal-model-for-ai-generated-image-quality-assessment/</loc>
     <lastmod>2024-02-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/mllm-training-framework-supporting-multimodal-pipeline-parallel/</loc>
+    <loc>http://localhost:1313/tags/mllm-training-framework-supporting-multimodal-pipeline-parallel/</loc>
     <lastmod>2023-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/project/mpp-llava/</loc>
+    <loc>http://localhost:1313/project/mpp-llava/</loc>
     <lastmod>2023-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/post/get-started/</loc>
+    <loc>http://localhost:1313/post/get-started/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/academic/</loc>
+    <loc>http://localhost:1313/tags/academic/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/hugo-blox/</loc>
+    <loc>http://localhost:1313/tags/hugo-blox/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/markdown/</loc>
+    <loc>http://localhost:1313/tags/markdown/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/second-brain/</loc>
+    <loc>http://localhost:1313/tags/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/post/second-brain/</loc>
+    <loc>http://localhost:1313/post/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/post/data-visualization/</loc>
+    <loc>http://localhost:1313/post/data-visualization/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/post/teach-courses/</loc>
+    <loc>http://localhost:1313/post/teach-courses/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/tags/hugo-blox-builder/</loc>
+    <loc>http://localhost:1313/tags/hugo-blox-builder/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://coobiw.github.io/post/project-management/</loc>
+    <loc>http://localhost:1313/post/project-management/</loc>
     <lastmod>2023-10-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

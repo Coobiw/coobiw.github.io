@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pretrain &amp; SFT | Bowen(Brian) Qu - Homepage</title>
-    <link>https://coobiw.github.io/tags/pretrain--sft/</link>
-      <atom:link href="https://coobiw.github.io/tags/pretrain--sft/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/pretrain--sft/</link>
+      <atom:link href="http://localhost:1313/tags/pretrain--sft/index.xml" rel="self" type="application/rss+xml" />
     <description>Pretrain &amp; SFT</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://coobiw.github.io/media/icon_hu_557f799f97e4e28d.png</url>
+      <url>http://localhost:1313/media/icon_hu_557f799f97e4e28d.png</url>
       <title>Pretrain &amp; SFT</title>
-      <link>https://coobiw.github.io/tags/pretrain--sft/</link>
+      <link>http://localhost:1313/tags/pretrain--sft/</link>
     </image>
     
     <item>
       <title>Aria</title>
-      <link>https://coobiw.github.io/project/aria/</link>
+      <link>http://localhost:1313/project/aria/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://coobiw.github.io/project/aria/</guid>
+      <guid>http://localhost:1313/project/aria/</guid>
       <description>&lt;p&gt;Aria is a multimodal native MoE model. It features：1️⃣State-of-the-art performance on various multimodal and language tasks, superior in video and document understanding; 2️⃣Long multimodal context window of 64K tokens; 3️⃣3.9B activated parameters per token, enabling fast inference speed and low fine-tuning cost.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>MPP-Qwen-Next</title>
-      <link>https://coobiw.github.io/project/mpp-llava/</link>
+      <link>http://localhost:1313/project/mpp-llava/</link>
       <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://coobiw.github.io/project/mpp-llava/</guid>
+      <guid>http://localhost:1313/project/mpp-llava/</guid>
       <description>&lt;p&gt;The Repo supports {video/image/multi-image} {single/multi-turn} conversations. All 7B/14B llava-like training is conducted on 3090/4090 GPUs. &lt;em&gt;&lt;strong&gt;To prevent poverty (24GB of VRAM) from limiting imagination&lt;/strong&gt;&lt;/em&gt;, I implemented an MLLM version based on deepspeed Pipeline Parallel.&lt;/p&gt;</description>
     </item>
     
