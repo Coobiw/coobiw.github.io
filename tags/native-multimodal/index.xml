@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Native Multimodal | Bowen(Brian) Qu - Homepage</title>
+    <link>http://localhost:1313/tags/native-multimodal/</link>
+      <atom:link href="http://localhost:1313/tags/native-multimodal/index.xml" rel="self" type="application/rss+xml" />
+    <description>Native Multimodal</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_557f799f97e4e28d.png</url>
+      <title>Native Multimodal</title>
+      <link>http://localhost:1313/tags/native-multimodal/</link>
+    </image>
+    
+    <item>
+      <title>Aria</title>
+      <link>http://localhost:1313/project/aria/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/aria/</guid>
+      <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

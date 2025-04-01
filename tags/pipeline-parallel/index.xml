@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pipeline Parallel | Bowen(Brian) Qu - Homepage</title>
+    <link>http://localhost:1313/tags/pipeline-parallel/</link>
+      <atom:link href="http://localhost:1313/tags/pipeline-parallel/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pipeline Parallel</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 25 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_557f799f97e4e28d.png</url>
+      <title>Pipeline Parallel</title>
+      <link>http://localhost:1313/tags/pipeline-parallel/</link>
+    </image>
+    
+    <item>
+      <title>MPP-Qwen-Next</title>
+      <link>http://localhost:1313/project/mpp-llava/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/mpp-llava/</guid>
+      <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
