@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>领取美团红包</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            max-width: 340px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FFC300 0%, #FF6B6B 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+        h2 { 
+            color: #333; 
+            font-size: 22px; 
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .btn { 
+            display: block;
+            background: linear-gradient(135deg, #FFC300 0%, #FF9500 100%); 
+            color: #000; 
+            padding: 16px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .tips { 
+            color: #999; 
+            font-size: 12px; 
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        .loading {
+            display: none;
+            color: #FFC300;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🧧</div>
+        <h2>美团外卖红包</h2>
+        <p class="subtitle">天天神券，天天领</p>
+        <a class="btn" id="openBtn" href="imeituan://www.meituan.com/web?url=https%3A%2F%2Fmarket.waimai.meituan.com%2Fgd%2Fsingle.html%3Fel_biz%3Dwaimai%26el_page%3Dgundam.loader%26gundam_id%3D2KAWnD%26activity_id%3D380797">打开美团APP领取</a>
+        <p class="loading" id="loading">正在唤起美团APP...</p>
+        <p class="tips">点击后若未自动跳转，请确保已安装美团APP<br>或手动复制链接到浏览器打开</p>
+    </div>
+    
+    <script>
+        // 自动尝试跳转
+        window.onload = function() {
+            var schemeUrl = "imeituan://www.meituan.com/web?url=https%3A%2F%2Fmarket.waimai.meituan.com%2Fgd%2Fsingle.html%3Fel_biz%3Dwaimai%26el_page%3Dgundam.loader%26gundam_id%3D2KAWnD%26activity_id%3D380797";
+            
+            // 显示加载提示
+            document.getElementById('loading').style.display = 'block';
+            
+            // 延迟跳转，让页面先渲染出来
+            setTimeout(function() {
+                window.location.href = schemeUrl;
+            }, 500);
+            
+            // 按钮点击也触发跳转
+            document.getElementById('openBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = schemeUrl;
+            });
+        };
+    </script>
+</body>
+</html>
