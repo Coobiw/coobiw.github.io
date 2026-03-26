@@ -227,6 +227,260 @@
       font-display: swap;
       src: url(/dist/font/Inter.var.woff2) format(woff2);
     }
+
+    :root {
+      --page-bg-base: #060d18;
+      --page-bg-surface: #0a1220;
+      --page-bg-elevated: rgba(10, 18, 32, 0.9);
+      --page-border-subtle: rgba(148, 163, 184, 0.14);
+    }
+
+    body.page-wrapper,
+    #page-bg {
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 28%),
+        linear-gradient(180deg, var(--page-bg-base) 0%, #08111f 38%, var(--page-bg-surface) 100%);
+    }
+
+    .page-header {
+      position: static !important;
+      top: auto !important;
+      z-index: auto !important;
+      padding: 0.6rem 0.9rem 0;
+    }
+
+    #site-header {
+      width: min(100%, 1240px);
+      margin: 0 auto;
+      background: transparent !important;
+      box-shadow: none !important;
+      border: 0;
+    }
+
+    #site-header .navbar {
+      min-height: 72px;
+      align-items: center;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid var(--page-border-subtle);
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(8, 16, 29, 0.94), rgba(10, 18, 32, 0.88)),
+        linear-gradient(180deg, rgba(56, 189, 248, 0.06), transparent 56%);
+      box-shadow: 0 18px 48px rgba(2, 8, 23, 0.32);
+      backdrop-filter: blur(18px);
+    }
+
+    #site-header .navbar-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(248, 250, 252, 0.96);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+
+    #site-header .navbar-brand img {
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(2, 8, 23, 0.32);
+    }
+
+    #site-header label[for="nav-toggle"] {
+      padding: 0.5rem;
+      border-radius: 14px;
+      color: rgba(226, 232, 240, 0.88);
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+
+    #site-header label[for="nav-toggle"]:hover {
+      background: rgba(59, 130, 246, 0.12);
+      color: rgba(248, 250, 252, 0.98);
+    }
+
+    #nav-menu {
+      align-items: center;
+      margin-left: clamp(1rem, 4vw, 4rem);
+    }
+
+    #nav-menu .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.58rem 1rem;
+      border: 1px solid transparent;
+      border-radius: 9999px;
+      color: rgba(226, 232, 240, 0.82);
+      font-weight: 600;
+      transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    #nav-menu .nav-link:hover {
+      color: rgba(248, 250, 252, 0.98);
+      background: rgba(59, 130, 246, 0.12);
+      border-color: rgba(96, 165, 250, 0.18);
+    }
+
+    #nav-menu .nav-link.active {
+      color: rgba(248, 250, 252, 1);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(14, 165, 233, 0.18));
+      border-color: rgba(96, 165, 250, 0.28);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .page-body {
+      min-height: calc(100vh - 4rem);
+      background:
+        radial-gradient(circle at top, rgba(16, 185, 129, 0.12), transparent 30%),
+        linear-gradient(180deg, #0f1117 0%, #12151d 100%);
+    }
+
+    #section-resume-experience {
+      padding: 4.5rem 0 5.5rem 0 !important;
+    }
+
+    #section-resume-experience .home-section-bg {
+      background: transparent;
+    }
+
+    #section-resume-experience .experience-page-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    #section-resume-experience .experience-page-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    #section-resume-experience .experience-panel {
+      background: rgba(17, 24, 39, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 24px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    #section-resume-experience .experience-panel > h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    #section-resume-experience .experience-panel > ol {
+      border-color: rgba(148, 163, 184, 0.2);
+      margin-left: 0.5rem;
+    }
+
+    #section-resume-experience .experience-panel > ol > li {
+      margin-bottom: 1.25rem;
+      margin-left: 1rem;
+      padding: 1.1rem 1.2rem 0.9rem 1.6rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 18px;
+    }
+
+    #section-resume-experience .experience-panel > ol > li:last-child {
+      margin-bottom: 0;
+    }
+
+    #section-resume-experience .experience-panel time,
+    #section-resume-experience .experience-panel span,
+    #section-resume-experience .experience-panel .prose {
+      color: rgb(203 213 225 / 0.92) !important;
+    }
+
+    #section-resume-awards {
+      padding: 0 0 5.5rem 0 !important;
+    }
+
+    #section-resume-awards .home-section-bg {
+      background: transparent;
+    }
+
+    #section-resume-awards .awards-page-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    #section-resume-awards .awards-panel {
+      background: rgba(17, 24, 39, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 24px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    #section-resume-awards .award-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(148, 163, 184, 0.12) !important;
+      border-radius: 18px;
+      box-shadow: none;
+    }
+
+    #section-resume-awards .award-card .prose,
+    #section-resume-awards .award-card .text-gray-500,
+    #section-resume-awards .award-card .dark\:text-gray-300,
+    #section-resume-awards .award-card .dark\:text-gray-400 {
+      color: rgb(203 213 225 / 0.92) !important;
+    }
+
+    @media (min-width: 1024px) {
+      #section-resume-experience .experience-page-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 1023.98px) {
+      .page-header {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+
+      #site-header .navbar {
+        padding: 0.8rem 1rem;
+      }
+
+      #nav-menu {
+        margin-top: 0.9rem;
+        margin-left: 0;
+        padding: 0.75rem;
+        border: 1px solid var(--page-border-subtle);
+        border-radius: 18px;
+        background: var(--page-bg-elevated);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
+
+      #nav-menu .nav-item + .nav-item {
+        margin-top: 0.35rem;
+      }
+
+      #nav-menu .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #section-resume-experience .experience-panel {
+        padding: 1.25rem;
+        border-radius: 20px;
+      }
+
+      #section-resume-experience .experience-panel > ol > li {
+        padding-right: 1rem;
+      }
+
+      #section-resume-awards .awards-panel {
+        padding: 1.25rem;
+        border-radius: 20px;
+      }
+    }
   </style>
 
   
@@ -736,16 +990,16 @@
 
 
 
-<div class="flex flex-col items-center max-w-prose mx-auto">
+<div class="experience-page-container">
 
 
 
 
 
-<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 ">
+<div class="experience-page-grid">
 
 
-<div class="w-full">
+<div class="w-full experience-panel">
   <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Experience</h3>
   <ol class="relative border-s border-gray-200 dark:border-gray-700">
     
@@ -820,7 +1074,7 @@
 
 
 
-<div class="w-full">
+<div class="w-full experience-panel">
   <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Education</h3>
     <ol class="relative border-s border-gray-200 dark:border-gray-700">
       
@@ -993,18 +1247,19 @@ Honours Bachelor Degree (Summa Cum Laude, Top 2%)</div>
 
 
 
-<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+<div class="awards-page-container">
 
-  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    Awards
-  </div>
+  <div class="awards-panel">
+    <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+      Awards
+    </div>
 
   
 
 <div class="w-full flex flex-col gap-6">
 
 
-<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="award-card w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   
   <a href=https://codalab.lisn.upsaclay.fr/competitions/17621#learn_the_details target="_blank" rel="noopener">
     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">🥉3rd winner of NTIRE 2024 Quality Assessment for AI-Generated Content - Track 2 Video</h5>
@@ -1033,7 +1288,7 @@ Honours Bachelor Degree (Summa Cum Laude, Top 2%)</div>
   
 </div>
   
-<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="award-card w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   
   <a href=https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts target="_blank" rel="noopener">
     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">🥈Kaggle Silver Medal：Stable Diffusion - Image to Prompts</h5>
@@ -1060,7 +1315,7 @@ Honours Bachelor Degree (Summa Cum Laude, Top 2%)</div>
   
 </div>
   
-<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="award-card w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   
   
     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">🏅Honorous Bachelor Degree</h5>
@@ -1082,6 +1337,7 @@ Honours Bachelor Degree (Summa Cum Laude, Top 2%)</div>
   
   
 </div>
+  </div>
 </div>
 
 
