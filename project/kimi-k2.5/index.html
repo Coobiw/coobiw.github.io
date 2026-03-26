@@ -1,0 +1,341 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 27, 2025 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.1" />
+
+  <meta name="author" content="Bowen Qu" />
+
+  <meta name="description" content="Kimi-K2.5 is Moonshot's most powerful native multimodal agentic model (1T params, 32B activated). I work on the Native Multimodal RL effort (K2.5 Report Chap2.2): ZeroVision ColdStart → Vision-Centric RL." />
+
+  <link rel="alternate" hreflang="en-us" href="https://coobiw.github.io/project/kimi-k2.5/" />
+
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+
+    <link href="/dist/wc.min.css" rel="stylesheet" />
+
+  <script>
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  <link rel="icon" type="image/png" href="/media/icon_hu_e396fd65b593dce3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_263793589abdb468.png" />
+
+  <link rel="canonical" href="https://coobiw.github.io/project/kimi-k2.5/" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  <meta property="og:site_name" content="Bowen(Brian) Qu - Homepage" />
+  <meta property="og:url" content="https://coobiw.github.io/project/kimi-k2.5/" />
+  <meta property="og:title" content="Kimi-K2.5: Visual Agentic Intelligence | Bowen(Brian) Qu - Homepage" />
+  <meta property="og:description" content="Kimi-K2.5 is Moonshot's most powerful native multimodal agentic model (1T params, 32B activated). I work on the Native Multimodal RL effort." /><meta property="og:image" content="https://coobiw.github.io/project/kimi-k2.5/featured.jpeg" />
+    <meta property="twitter:image" content="https://coobiw.github.io/project/kimi-k2.5/featured.jpeg" /><meta property="og:locale" content="en-us" />
+
+    <meta
+      property="article:published_time"
+      content="2025-03-27T00:00:00&#43;00:00"
+    />
+    <meta property="article:modified_time" content="2025-03-27T00:00:00&#43;00:00">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://coobiw.github.io/project/kimi-k2.5/"
+  },
+  "headline": "Kimi-K2.5: Visual Agentic Intelligence",
+  "image": [
+    "https://coobiw.github.io/project/kimi-k2.5/featured.jpeg"
+  ],
+  "datePublished": "2025-03-27T00:00:00Z",
+  "dateModified": "2025-03-27T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "Bowen Qu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bowen(Brian) Qu - Homepage",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://coobiw.github.io/media/icon_hu_9d46c6d4b3736c69.png"
+    }
+  },
+  "description": "Kimi-K2.5 is Moonshot's most powerful native multimodal agentic model. I work on the Native Multimodal RL effort."
+}
+</script>
+
+  <title>Kimi-K2.5: Visual Agentic Intelligence | Bowen(Brian) Qu - Homepage</title>
+
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  <script
+    defer
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
+  ></script>
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+        <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      <a class="navbar-brand" href="/" title="Bowen(Brian) Qu - Homepage">
+              <img
+                fetchpriority="high"
+                decoding="async"
+                class=""
+                width="29"
+                height="36"
+                src="/media/baka_hu_7a6c549bc9605430.webp"
+                alt="Bowen(Brian) Qu - Homepage" />
+        Bowen(Brian) Qu - 瞿博文
+      </a>
+    </div>
+
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="/"
+        >Biography</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="/experience/"
+        >Experience</a>
+      </li>
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+    </div>
+  </nav>
+</header>
+
+    </div>
+    <div class="page-body my-10">
+
+<div class="mx-auto flex max-w-screen-xl">
+
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Kimi-K2.5: Visual Agentic Intelligence</h1>
+
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Mar 27, 2025</span><span class="mx-1">&middot;</span>
+          <div class="group inline-flex items-center text-current gap-x-1.5 mx-1">
+            <div>Moonshot AI</div>
+          </div>
+        </div>
+
+        <div class="mt-3">
+
+<div class="">
+
+<a class="hb-attachment-link hb-attachment-large" href="https://github.com/MoonshotAI/Kimi-K2.5" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+  GitHub
+</a>
+
+
+<a class="hb-attachment-link hb-attachment-large" href="https://www.kimi.com/blog/kimi-k2-5" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  Blog
+</a>
+
+
+<a class="hb-attachment-link hb-attachment-large" href="https://huggingface.co/moonshotai" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456M16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183l.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394l-1.183.394a2.25 2.25 0 0 0-1.423 1.423"/></svg>
+  Models
+</a>
+
+</div>
+
+
+        </div>
+      </div>
+
+
+      <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 720px; max-height: 500px;">
+        <div style="position: relative">
+          <img src="/project/kimi-k2.5/featured.jpeg" width="720" alt="Kimi-K2.5 ZeroVision RL" class="featured-image">
+        </div>
+      </div>
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+
+        <div class="max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
+          <div class="font-bold text-2xl">Overview</div>
+          <div>
+            <p>Kimi-K2.5 is <a href="https://www.moonshot.ai/" target="_blank" rel="noopener">Moonshot AI</a>'s most powerful model &mdash; a native multimodal agentic model with <strong>1 trillion parameters</strong> (32B activated), trained on 15 trillion mixed visual and text tokens, with a 256K context window.</p>
+            <p><strong>Key highlights:</strong></p>
+            <ul>
+              <li><strong>AIME 2025:</strong> 96.1%</li>
+              <li style="background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%); border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 6px;"><strong>MMMU-Pro: 78.5%</strong> &mdash; &#127775; I mainly contributed to this!</li>
+              <li><strong>SWE-Bench Verified:</strong> 76.8%</li>
+            </ul>
+            <p>Features include native multimodality, an agent swarm architecture (up to 100 parallel sub-agents), and state-of-the-art visual code generation from UI designs.</p>
+          </div>
+        </div>
+
+        <div class="max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
+          <div class="font-bold text-2xl">My Contribution</div>
+          <div>
+            <p>I work on the <strong>Native Multimodal RL</strong> effort, documented in <strong>K2.5 Report Chapter 2.2</strong>:</p>
+            <ul>
+              <li>&#x1F539; <strong>ZeroVision ColdStart &rarr; Vision-Centric RL:</strong> Starting from a Zero Vision SFT model (text-only thinking SFT, no vision SFT) to preserve the base model's strong Pass@N, then applying pure Vision RL</li>
+              <li>&#x1F539; <strong>Vision Reasoning &amp; Knowledge &amp; TIR RL</strong></li>
+              <li>&#x1F539; <strong>Chart Understanding and Chart-to-Code</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="max-w-prose my-8">
+          <h2 id="zero-vision-rl" class="text-2xl font-bold mb-4">Zero Vision SFT -&gt; Pure Vision RL &mdash; 心路历程</h2>
+
+          <p>起手做thinking的时候，高质量的Vision Thinking Data是非常稀缺的，但因为K2-Thinking，我们有很多高质量的text thinking data可以做sft，加上K2.5的Base模型的vision能力非常强，Zero Vision SFT版本的模型就自然地被haoning快速地拿出来了。这个模型直接用来测分并不强，可以看到Fig2的起点是挺烂的，但因为Base模型强，且没有Vision SFT的影响（质量不够的情况下就会影响），他的<strong>Pass@N理所应当地保留下来了</strong>，这是一个非常适合去做Vision RL的起点！</p>
+
+          <p><strong>震惊:</strong> 最初发现这个现象是在InfoVQA上，这个bench有两个特点：刚需高分辨率识图 以及 对输出格式要求极其严格，Zero Vision SFT的模型起点只有50-60分，但在RL里做<strong>10次权重更新</strong>就可以到几乎SOTA的分数...这个1T的模型在10次更新中就完成了修格式、修感知、pass@k -&gt; pass@1等等，小小的我产生了大大的震惊，于是梭哈了LongRun，就跑出了上述Fig2这样非常优美的曲线（这还是eval，train只会更优美...）</p>
+
+          <p><strong>震惊&sup2;:</strong> 值得一提的是，这个figure只是我们观测的部分，让我震惊程度再上一个level的是，在其他完全没进job观测，只在开始和结束测一些的Vision Benchmark里，效果也非常非常好！</p>
+
+          <p><strong>震惊&sup3;:</strong> 有一次下去拿外卖遇到了zijia，他说这个模型直接就可以roll出质量不错的vision toolcall轨迹，可以说这个完全是<strong>Text SFT + Vision RL的大泛化</strong>！其他没观测的benchmark泛化还算可以想象，toolcall这个已经在我的认知范围外了orz</p>
+
+          <p><strong>震惊&#8308;:</strong> 来自haoning的神仙sense，我们发现这次纯Vision的RL能<strong>涨text的knowledge</strong>，MMLU-Pro、GPQA都有涨！就像Text SFT的Pattern可以通过Vision RL上来达到泛化又不分脑地迁移到Vision Pattern，Vision RL后低幻觉 + 高信息量的Pattern也会泛化到Text里，这应该是Text Knowledge上升的原因，本质左脚踩右脚飞升！</p>
+
+          <p>在做到这些之后，就有了非常高质量的vision thinking data了，后续RFT + RL的loop就按部就班做下去了，现在是完全坚信<strong>longrun</strong>！内科没问题且不reward hacking，就一直跑下去吧！！！有问题再出手，哪怕是安慰剂...</p>
+
+          <p>BTW，这次LongRun中间我对K2.5的打扰是非常少的...我只需要在内科出问题的时候调个参push or pull他一把，在似乎有点hack迹象的时候把judge / filter魔改一下，就没我事了，让他跑着就好，这就是Trillion级别模型的魅力吗...靠，显得我好没用...</p>
+        </div>
+
+        <hr />
+
+        <div class="max-w-prose my-8">
+          <h2 id="closing-thoughts" class="text-2xl font-bold mb-4">写在最后</h2>
+
+          <p>作为一个刚进入职场的校招小卡拉米，在过去一段时间重新体会了"累并快乐着"，好像是global-local，整体是累着的，但只需中间某些时刻的快乐就能一定程度冲淡了整体的累。熬过的夜在最后K2.5端上来的时候都只剩下兴奋和朋友圈里迫不及待地"Proud of the journey"！BTW，观点仅供参考orz</p>
+        </div>
+
+      </div>
+
+      <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-27T00:00:00.000Z">
+        <span>Last updated on</span>
+        Mar 27, 2025</time>
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        <div class="max-w-prose print:hidden">
+
+<div class="flex justify-center">
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/native-multimodal-rl/">Native Multimodal RL</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/mllm/">MLLM</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/vision-rl/">Vision RL</a>
+</div>
+
+</div>
+</div>
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  <p class="powered-by text-center">
+    &copy; 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+
+  <p class="powered-by text-center">
+    Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> &mdash; the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+  </p>
+
+</footer>
+
+    </div>
+
+  </body>
+</html>
