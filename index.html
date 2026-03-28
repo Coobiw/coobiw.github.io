@@ -252,7 +252,7 @@
     }
 
     #section-resume-biography-3 {
-      overflow: hidden;
+      overflow: visible;
     }
 
     #section-resume-biography-3 .home-section-bg.bg-image {
@@ -1151,8 +1151,21 @@
   </div>
 
   <div class="mt-6 flex justify-center">
-    <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=glqPN1yE1gB6-UpgBDlga__XorwBHf9WYV3t4dMhQOQ"></script>
+    <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=Vb6PcO-eZxSWeUIbGonnKJPmIff5Vegq4BxFXd8A67w"></script>
   </div>
+  <p id="visitor-range" class="text-xs text-gray-400 mt-1 text-center"></p>
+  <script>
+    (function() {
+      var now = new Date();
+      var prev = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+      // 如果上个月没有这一天（如3/30→2/30溢出成3/2），回退到上个月最后一天
+      if (prev.getMonth() === now.getMonth()) {
+        prev = new Date(now.getFullYear(), now.getMonth(), 0);
+      }
+      var fmt = function(d) { return d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear(); };
+      document.getElementById('visitor-range').textContent = 'visitors (' + fmt(prev) + ' - ' + fmt(now) + ')';
+    })();
+  </script>
 
   </div>
 
