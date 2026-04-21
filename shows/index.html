@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en-us" dir="ltr" data-wc-theme-default="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Bowen Qu" />
+  <meta name="description" content="Shows and demos from Bowen Qu." />
+  <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  <link href="/dist/wc.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/media/icon_hu_e396fd65b593dce3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_263793589abdb468.png" />
+  <link rel="canonical" href="https://coobiw.github.io/shows/" />
+  <meta property="og:site_name" content="Bowen(Brian) Qu - Homepage" />
+  <meta property="og:url" content="https://coobiw.github.io/shows/" />
+  <meta property="og:title" content="Shows | Bowen(Brian) Qu - Homepage" />
+  <meta property="og:description" content="Shows and demos from Bowen Qu." />
+  <meta property="og:image" content="https://coobiw.github.io/shows/k2.6_vtir/trajectories/run_20260422_030423/image2.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <title>Shows | Bowen(Brian) Qu - Homepage</title>
+  <script>
+    window.hbb = {
+      defaultTheme: document.documentElement.dataset.wcThemeDefault,
+      setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+      setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    };
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+
+    :root {
+      --page-bg-base: #060d18;
+      --page-bg-surface: #0a1220;
+      --page-bg-elevated: rgba(10, 18, 32, 0.9);
+      --page-panel: rgba(15, 23, 42, 0.76);
+      --page-border-subtle: rgba(148, 163, 184, 0.14);
+      --page-text: rgba(248, 250, 252, 0.96);
+      --page-muted: rgba(203, 213, 225, 0.78);
+      --page-faint: rgba(148, 163, 184, 0.62);
+      --page-blue: #38bdf8;
+      --page-teal: #2dd4bf;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body.page-wrapper {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(180deg, var(--page-bg-base) 0%, #08111f 42%, var(--page-bg-surface) 100%);
+      color: var(--page-text);
+      font-family: 'Inter var', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    #page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(130deg, rgba(56, 189, 248, 0.08), transparent 34%),
+        linear-gradient(240deg, rgba(45, 212, 191, 0.08), transparent 42%),
+        linear-gradient(180deg, var(--page-bg-base) 0%, #08111f 42%, var(--page-bg-surface) 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-header {
+      padding: 0.6rem 0.9rem 0;
+    }
+
+    #site-header {
+      width: min(100%, 1240px);
+      margin: 0 auto;
+      background: transparent !important;
+      border: 0;
+      box-shadow: none !important;
+    }
+
+    #site-header .navbar {
+      min-height: 72px;
+      align-items: center;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid var(--page-border-subtle);
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(8, 16, 29, 0.94), rgba(10, 18, 32, 0.88)),
+        linear-gradient(180deg, rgba(56, 189, 248, 0.06), transparent 56%);
+      box-shadow: 0 18px 48px rgba(2, 8, 23, 0.32);
+      backdrop-filter: blur(18px);
+    }
+
+    #site-header .navbar-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(248, 250, 252, 0.96);
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    #site-header .navbar-brand img {
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(2, 8, 23, 0.32);
+    }
+
+    #site-header label[for="nav-toggle"] {
+      margin-left: auto;
+      padding: 0.5rem;
+      border-radius: 14px;
+      color: rgba(226, 232, 240, 0.88);
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+
+    #site-header label[for="nav-toggle"]:hover {
+      background: rgba(59, 130, 246, 0.12);
+      color: rgba(248, 250, 252, 0.98);
+    }
+
+    #nav-menu {
+      align-items: center;
+      margin-left: clamp(1rem, 4vw, 4rem);
+    }
+
+    #nav-toggle:checked ~ #nav-menu {
+      display: flex;
+    }
+
+    #nav-toggle:checked + label #show-button {
+      display: none;
+    }
+
+    #nav-toggle:checked + label #hide-button {
+      display: block;
+    }
+
+    #nav-menu .nav-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.58rem 1rem;
+      border: 1px solid transparent;
+      border-radius: 9999px;
+      color: rgba(226, 232, 240, 0.82);
+      font-weight: 600;
+      transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    #nav-menu .nav-link:hover {
+      color: rgba(248, 250, 252, 0.98);
+      background: rgba(59, 130, 246, 0.12);
+      border-color: rgba(96, 165, 250, 0.18);
+    }
+
+    #nav-menu .nav-link.active {
+      color: rgba(248, 250, 252, 1);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(14, 165, 233, 0.18));
+      border-color: rgba(96, 165, 250, 0.28);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .page-body {
+      min-height: calc(100vh - 4rem);
+    }
+
+    .shows-shell {
+      width: min(calc(100% - 2rem), 1240px);
+      margin: 0 auto;
+      padding: clamp(1.2rem, 4vw, 2.4rem) 0 5rem;
+    }
+
+    .show-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 1rem;
+    }
+
+    .show-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      min-height: 320px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 26px;
+      background: var(--page-panel);
+      box-shadow: 0 24px 60px rgba(2, 8, 23, 0.25);
+      backdrop-filter: blur(12px);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .show-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(96, 165, 250, 0.26);
+      box-shadow: 0 30px 70px rgba(2, 8, 23, 0.34);
+    }
+
+    .show-card-media {
+      display: grid;
+      min-width: 0;
+      place-items: center;
+      padding: 1rem;
+      background: rgba(2, 6, 23, 0.46);
+    }
+
+    .show-card-media img {
+      display: block;
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 18px 42px rgba(2, 8, 23, 0.34);
+    }
+
+    .show-preview-pair {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .show-preview-pair img {
+      aspect-ratio: 4 / 3;
+      height: auto;
+      min-height: 0;
+      background: #fff;
+    }
+
+    .show-card-body {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: clamp(1rem, 2.5vw, 1.6rem);
+    }
+
+    .show-card h2 {
+      margin: 0;
+      color: var(--page-text);
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      font-weight: 850;
+      line-height: 1.15;
+    }
+
+    .show-card p {
+      margin: 0.85rem 0 0;
+      color: var(--page-muted);
+      line-height: 1.7;
+    }
+
+    .show-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0.35rem 0.65rem;
+      border: 1px solid var(--page-border-subtle);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--page-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .show-action {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 40px;
+      padding: 0.6rem 0.85rem;
+      border: 1px solid rgba(96, 165, 250, 0.28);
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.16);
+      color: var(--page-text);
+      font-weight: 800;
+    }
+
+    footer {
+      width: min(100%, 1240px);
+      margin: 0 auto;
+      padding: 0 1rem 2rem;
+      color: rgba(203, 213, 225, 0.72);
+    }
+
+    footer a {
+      color: rgba(226, 232, 240, 0.9);
+      text-decoration: underline;
+      text-decoration-color: rgba(148, 163, 184, 0.45);
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 1023.98px) {
+      .page-header {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+
+      #site-header .navbar {
+        padding: 0.8rem 1rem;
+      }
+
+      #nav-menu {
+        margin-top: 0.9rem;
+        margin-left: 0;
+        padding: 0.75rem;
+        border: 1px solid var(--page-border-subtle);
+        border-radius: 18px;
+        background: var(--page-bg-elevated);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
+
+      #nav-menu .nav-item + .nav-item {
+        margin-top: 0.35rem;
+      }
+
+      #nav-menu .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .show-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shows-shell {
+        width: min(calc(100% - 1.5rem), 1240px);
+      }
+
+      #site-header .navbar-brand {
+        max-width: 210px;
+        line-height: 1.25;
+      }
+
+      .show-card-media {
+        padding: 0.75rem;
+      }
+
+      .show-card-media img {
+        max-height: 220px;
+      }
+
+      .show-preview-pair {
+        gap: 0.5rem;
+      }
+
+      .show-card-body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+  <div id="page-bg"></div>
+  <div class="page-header">
+    <header id="site-header" class="header">
+      <nav class="navbar px-3 flex justify-left">
+        <div class="order-0 h-100">
+          <a class="navbar-brand" href="/" title="Bowen(Brian) Qu - Homepage">
+            <img
+              fetchpriority="high"
+              decoding="async"
+              width="29"
+              height="36"
+              src="/media/baka_hu_7a6c549bc9605430.webp"
+              alt="Bowen(Brian) Qu - Homepage" />
+            Bowen(Brian) Qu - 瞿博文
+          </a>
+        </div>
+
+        <input id="nav-toggle" type="checkbox" class="hidden" />
+        <label
+          for="nav-toggle"
+          class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+          <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+            <title>Open Menu</title>
+            <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+          </svg>
+          <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+            <title>Close Menu</title>
+            <polygon
+              points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+              transform="rotate(45 10 10)"></polygon>
+          </svg>
+        </label>
+
+        <ul
+          id="nav-menu"
+          class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left">
+          <li class="nav-item">
+            <a class="nav-link" href="/#section-resume-biography-3">Biography</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/experience/">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/shows/">Shows</a>
+          </li>
+        </ul>
+
+        <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0"></div>
+      </nav>
+    </header>
+  </div>
+
+  <main class="page-body">
+    <div class="shows-shell">
+      <section class="show-grid" aria-label="Available shows">
+        <a class="show-card" href="/shows/k2.6_vtir/" aria-label="Open K2.6 VTIR Trajectories">
+          <div class="show-card-media">
+            <div class="show-preview-pair" aria-label="K2.6 VTIR input previews">
+              <img
+                src="/shows/k2.6_vtir/trajectories/run_20260422_030423/image2.png"
+                alt="Knight Tour input"
+                loading="lazy"
+                decoding="async" />
+              <img
+                src="/shows/k2.6_vtir/trajectories/run_20260422_042510/image.jpg"
+                alt="Shadow Match input"
+                loading="lazy"
+                decoding="async" />
+            </div>
+          </div>
+          <div class="show-card-body">
+            <div>
+              <div class="show-meta">
+                <span class="pill">K2.6</span>
+                <span class="pill">VTIR</span>
+                <span class="pill">2 trajectories</span>
+              </div>
+              <h2>K2.6 VTIR Trajectories</h2>
+              <p>
+                Visualize two multimodal tool-integrated reasoning runs: an 8x8
+                Knight Tour and a hedgehog shadow matching task.
+              </p>
+            </div>
+            <span class="show-action">Open show</span>
+          </div>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a></p>
+  </footer>
+
+  <script src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js" defer></script>
+</body>
+</html>
