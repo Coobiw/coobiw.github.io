@@ -1,16 +1,6 @@
 (function () {
   const runs = [
     {
-      id: "knight",
-      tab: "Knight Tour",
-      title: "Knight Tour Grid",
-      runId: "run_20260422_030423",
-      image: "trajectories/run_20260422_030423/image2.png",
-      messages: "trajectories/run_20260422_030423/messages.json",
-      prompt: "Number steps on a knights tour of the grid from 1 to 60.\n\nThe goal is a tour in which every cell is visited once. A knight moves in an L shape: two squares horizontally then one vertical, or two squares vertically and one horizontal. You can draw the trajectory on the original figure before the finale answer!",
-      artifact: "Knight path"
-    },
-    {
       id: "shadow",
       tab: "Hedgehog Shadow",
       title: "Shadow Match",
@@ -19,6 +9,16 @@
       messages: "trajectories/run_20260422_042510/messages.json",
       prompt: "Find the shadow that perfectly matches the hedgehog pattern above.",
       artifact: "IoU ranking"
+    },
+    {
+      id: "knight",
+      tab: "Knight Tour",
+      title: "Knight Tour Grid",
+      runId: "run_20260422_030423",
+      image: "trajectories/run_20260422_030423/image2.png",
+      messages: "trajectories/run_20260422_030423/messages.json",
+      prompt: "Number steps on a knights tour of the grid from 1 to 60.\n\nThe goal is a tour in which every cell is visited once. A knight moves in an L shape: two squares horizontally then one vertical, or two squares vertically and one horizontal. You can draw the trajectory on the original figure before the finale answer!",
+      artifact: "Knight path"
     }
   ];
 
@@ -78,7 +78,6 @@
       .map(itemText)
       .filter(Boolean)
       .join("\n")
-      .replace(/^User uploaded an image at .*\n?/m, "")
       .trim()
   );
 
@@ -91,6 +90,11 @@
         label: isInput ? "Input image" : "Visual artifact"
       };
     });
+
+  const userTextParts = (message) => normalizeItems(message)
+    .map(itemText)
+    .map((text) => stripAnsi(text).trim())
+    .filter(Boolean);
 
   const finalAnswer = (messages) => {
     for (let index = messages.length - 1; index >= 0; index -= 1) {
@@ -263,6 +267,7 @@
     const reasoning = stripAnsi(message.reasoning_content || "").trim();
     const images = messageImages(message, run, index);
     const isTool = message.role === "tool";
+    const isInputUserMessage = message.role === "user" && index === 0 && images.length;
 
     const visibleText = text
       ? isTool
@@ -284,6 +289,19 @@
         `).join("")}
       </div>
     ` : "";
+
+    if (isInputUserMessage) {
+      const [uploadText = "", ...questionParts] = userTextParts(message);
+      const uploadHtml = uploadText ? `<p class="trace-text">${escapeHtml(uploadText)}</p>` : "";
+      const questionText = questionParts.join("\n").trim();
+      const questionHtml = questionText ? `<p class="trace-text">${escapeHtml(questionText)}</p>` : "";
+
+      if (!uploadHtml && !questionHtml && !imagesHtml && !reasoningHtml) {
+        return "<p class=\"trace-text\">Visual artifact recorded.</p>";
+      }
+
+      return `${uploadHtml}${imagesHtml}${questionHtml}${reasoningHtml}`;
+    }
 
     if (!visibleText && !reasoningHtml && !imagesHtml) {
       return "<p class=\"trace-text\">Visual artifact recorded.</p>";
