@@ -7,7 +7,7 @@
       runId: "run_20260422_030423",
       image: "trajectories/run_20260422_030423/image2.png",
       messages: "trajectories/run_20260422_030423/messages.json",
-      prompt: "Number steps on a knights tour of the grid from 1 to 60.",
+      prompt: "Number steps on a knights tour of the grid from 1 to 60.\n\nThe goal is a tour in which every cell is visited once. A knight moves in an L shape: two squares horizontally then one vertical, or two squares vertically and one horizontal. You can draw the trajectory on the original figure before the finale answer!",
       artifact: "Knight path"
     },
     {
@@ -215,8 +215,12 @@
   const renderTaskVisual = (run, messages) => {
     if (run.id === "knight") {
       return `
-        <div class="visual-grid">
-          <div class="visual-card">${renderKnightBoard(findKnightGrid(messages))}</div>
+        <div class="visual-grid knight-visual-grid">
+          <div class="visual-card">
+            <figure class="key-figure">
+              <img src="trajectories/run_20260422_030423/knight_tour.png" alt="Knight Tour trajectory overlay" loading="lazy" decoding="async" />
+            </figure>
+          </div>
           <div class="visual-card">
             <h3 class="section-title">Final Answer</h3>
             <pre class="answer-pre">${escapeHtml(finalAnswer(messages))}</pre>

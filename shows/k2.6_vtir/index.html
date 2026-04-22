@@ -386,6 +386,7 @@
       margin: 0;
       color: var(--page-muted);
       line-height: 1.75;
+      white-space: pre-wrap;
     }
 
     .metric-grid {
@@ -426,6 +427,10 @@
       grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
       gap: 1rem;
       align-items: start;
+    }
+
+    .knight-visual-grid {
+      grid-template-columns: minmax(260px, 0.98fr) minmax(0, 1.02fr);
     }
 
     .shadow-visual-grid {
@@ -583,6 +588,11 @@
 
     .shadow-visual-grid .key-figure {
       margin: 0 0 1rem;
+      padding: 0.35rem;
+    }
+
+    .knight-visual-grid .key-figure {
+      margin: 0;
       padding: 0.35rem;
     }
 
