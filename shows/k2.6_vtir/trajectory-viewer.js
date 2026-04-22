@@ -7,7 +7,7 @@
       runId: "run_20260422_030423",
       image: "trajectories/run_20260422_030423/image2.png",
       messages: "trajectories/run_20260422_030423/messages.json",
-      prompt: "question: Number steps on a knights tour of the grid from 1 to 60.\n\nThe goal is a tour in which every cell is visited once. A knight moves in an L shape: two squares horizontally then one vertical, or two squares vertically and one horizontal. You can draw the trajectory on the original figure before the finale answer!",
+      prompt: "Number steps on a knights tour of the grid from 1 to 60.",
       artifact: "Knight path"
     },
     {
@@ -343,10 +343,6 @@
               <span class="pill">${escapeHtml(run.runId)}</span>
               <span class="pill">${escapeHtml(run.artifact)}</span>
             </figcaption>
-            <p class="input-question">
-              <span>Input Question</span>
-              <strong>${escapeHtml(run.prompt)}</strong>
-            </p>
           </figure>
 
           <div class="task-card">
