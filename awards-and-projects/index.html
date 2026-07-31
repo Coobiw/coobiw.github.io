@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
 <!-- Last Published: April 3, 2025 --><html lang="en-us" dir="ltr"
-      data-wc-theme-default="dark">
+      data-wc-theme-default="light">
   
 <head>
   <meta charset="utf-8" />
@@ -229,17 +229,17 @@
     }
 
     :root {
-      --page-bg-base: #060d18;
-      --page-bg-surface: #0a1220;
-      --page-bg-elevated: rgba(10, 18, 32, 0.9);
-      --page-border-subtle: rgba(148, 163, 184, 0.14);
+      --page-bg-base: #f7f1e6;
+      --page-bg-surface: #f2ebdd;
+      --page-bg-elevated: rgba(255, 252, 246, 0.92);
+      --page-border-subtle: rgba(133, 103, 71, 0.18);
     }
 
     body.page-wrapper,
     #page-bg {
       background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 28%),
-        linear-gradient(180deg, var(--page-bg-base) 0%, #08111f 38%, var(--page-bg-surface) 100%);
+        radial-gradient(circle at top, rgba(217, 164, 65, 0.10), transparent 28%),
+        linear-gradient(180deg, var(--page-bg-base) 0%, #f5edde 38%, var(--page-bg-surface) 100%);
     }
 
     .page-header {
@@ -264,9 +264,9 @@
       border: 1px solid var(--page-border-subtle);
       border-radius: 22px;
       background:
-        linear-gradient(135deg, rgba(8, 16, 29, 0.94), rgba(10, 18, 32, 0.88)),
-        linear-gradient(180deg, rgba(56, 189, 248, 0.06), transparent 56%);
-      box-shadow: 0 18px 48px rgba(2, 8, 23, 0.32);
+        linear-gradient(135deg, rgba(255, 252, 246, 0.94), rgba(250, 244, 234, 0.88)),
+        linear-gradient(180deg, rgba(217, 164, 65, 0.08), transparent 56%);
+      box-shadow: 0 18px 48px rgba(133, 103, 71, 0.16);
       backdrop-filter: blur(18px);
     }
 
@@ -274,26 +274,26 @@
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
-      color: rgba(248, 250, 252, 0.96);
+      color: rgba(67, 50, 32, 0.96);
       font-weight: 700;
       letter-spacing: -0.015em;
     }
 
     #site-header .navbar-brand img {
       border-radius: 10px;
-      box-shadow: 0 8px 18px rgba(2, 8, 23, 0.32);
+      box-shadow: 0 8px 18px rgba(133, 103, 71, 0.22);
     }
 
     #site-header label[for="nav-toggle"] {
       padding: 0.5rem;
       border-radius: 14px;
-      color: rgba(226, 232, 240, 0.88);
+      color: rgba(103, 78, 51, 0.88);
       transition: background-color 180ms ease, color 180ms ease;
     }
 
     #site-header label[for="nav-toggle"]:hover {
-      background: rgba(59, 130, 246, 0.12);
-      color: rgba(248, 250, 252, 0.98);
+      background: rgba(217, 164, 65, 0.14);
+      color: rgba(67, 50, 32, 0.98);
     }
 
     #nav-menu {
@@ -307,7 +307,7 @@
       padding: 0.58rem 1rem;
       border: 1px solid transparent;
       border-radius: 9999px;
-      color: rgba(226, 232, 240, 0.82);
+      color: rgba(103, 78, 51, 0.85);
       font-weight: 600;
       transition:
         color 180ms ease,
@@ -317,23 +317,23 @@
     }
 
     #nav-menu .nav-link:hover {
-      color: rgba(248, 250, 252, 0.98);
-      background: rgba(59, 130, 246, 0.12);
-      border-color: rgba(96, 165, 250, 0.18);
+      color: rgba(67, 50, 32, 0.98);
+      background: rgba(217, 164, 65, 0.14);
+      border-color: rgba(217, 164, 65, 0.22);
     }
 
     #nav-menu .nav-link.active {
-      color: rgba(248, 250, 252, 1);
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(14, 165, 233, 0.18));
-      border-color: rgba(96, 165, 250, 0.28);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      color: rgba(67, 50, 32, 1);
+      background: linear-gradient(135deg, rgba(217, 164, 65, 0.26), rgba(191, 155, 110, 0.20));
+      border-color: rgba(191, 155, 110, 0.32);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
     }
 
     .page-body {
       min-height: calc(100vh - 4rem);
       background:
-        radial-gradient(circle at top, rgba(16, 185, 129, 0.12), transparent 30%),
-        linear-gradient(180deg, #0f1117 0%, #12151d 100%);
+        radial-gradient(circle at top, rgba(217, 164, 65, 0.12), transparent 30%),
+        linear-gradient(180deg, #f7f1e6 0%, #f2ebdd 100%);
     }
 
     #section-selected-projects {
@@ -351,10 +351,10 @@
     }
 
     #section-selected-projects .projects-panel {
-      background: rgba(17, 24, 39, 0.82);
-      border: 1px solid rgba(148, 163, 184, 0.14);
+      background: rgba(255, 253, 248, 0.72);
+      border: 1px solid rgba(133, 103, 71, 0.16);
       border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 24px 60px rgba(133, 103, 71, 0.14);
       padding: 2rem;
       backdrop-filter: blur(10px);
     }
@@ -374,17 +374,17 @@
     }
 
     #section-resume-awards .awards-panel {
-      background: rgba(17, 24, 39, 0.82);
-      border: 1px solid rgba(148, 163, 184, 0.14);
+      background: rgba(255, 253, 248, 0.72);
+      border: 1px solid rgba(133, 103, 71, 0.16);
       border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 24px 60px rgba(133, 103, 71, 0.14);
       padding: 2rem;
       backdrop-filter: blur(10px);
     }
 
     #section-resume-awards .award-card {
-      background: rgba(255, 255, 255, 0.03) !important;
-      border: 1px solid rgba(148, 163, 184, 0.12) !important;
+      background: rgba(255, 255, 255, 0.55) !important;
+      border: 1px solid rgba(133, 103, 71, 0.15) !important;
       border-radius: 18px;
       box-shadow: none;
     }
@@ -393,7 +393,7 @@
     #section-resume-awards .award-card .text-gray-500,
     #section-resume-awards .award-card .dark\:text-gray-300,
     #section-resume-awards .award-card .dark\:text-gray-400 {
-      color: rgb(203 213 225 / 0.92) !important;
+      color: rgb(92 68 45 / 0.92) !important;
     }
 
     .oral-badge {
@@ -942,7 +942,7 @@
 
 
 
-<section id="section-selected-projects" class="relative hbb-section dark" style="padding: 4.5rem 0 5.5rem 0;" >
+<section id="section-selected-projects" class="relative hbb-section " style="padding: 4.5rem 0 5.5rem 0;" >
  <div class="home-section-bg " >
 
  </div>
