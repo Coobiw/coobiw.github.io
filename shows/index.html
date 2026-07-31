@@ -388,6 +388,21 @@
         padding: 1rem;
       }
     }
+
+    @media (min-width: 1024px) {
+      #site-header .navbar {
+        flex-wrap: nowrap;
+      }
+
+      #site-header #nav-menu {
+        width: auto !important;
+        flex-wrap: nowrap;
+      }
+
+      #site-header #nav-menu > :not([hidden]) ~ :not([hidden]) {
+        margin-left: 0.9rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -429,10 +444,19 @@
           id="nav-menu"
           class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left">
           <li class="nav-item">
-            <a class="nav-link" href="/#section-resume-biography-3">Biography</a>
+            <a class="nav-link" href="/#section-resume-biography-3">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/awards-and-projects/">Awards &amp; Projects</a>
+            <a class="nav-link" href="/#section-work">Moonshot(Kimi)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#section-markdown">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#section-publications">Publication</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/awards-and-projects/">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="/shows/">Shows</a>
@@ -488,7 +512,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a></p>
+    <p>Cowork with Kimi <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>K3</span></p>
   </footer>
 
   <script src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js" defer></script>

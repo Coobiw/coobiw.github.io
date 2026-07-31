@@ -391,18 +391,16 @@
     }
 
     .oral-badge {
-      display: inline-block;
-      padding: 0.18rem 0.75rem;
-      border-radius: 9999px;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.6em;
       vertical-align: middle;
-      color: #fff7ed;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
       background: linear-gradient(110deg, #b45309 15%, #d97706 35%, #fbbf24 50%, #d97706 65%, #b45309 85%);
       background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
       animation: k3-shimmer 3.2s linear infinite;
-      box-shadow: 0 0 14px rgba(251, 191, 36, 0.5), 0 2px 6px rgba(0, 0, 0, 0.25);
-      text-shadow: 0 1px 2px rgba(120, 53, 15, 0.6);
       white-space: nowrap;
     }
 
@@ -433,6 +431,21 @@
       #nav-menu .nav-link {
         width: 100%;
         justify-content: flex-start;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #site-header .navbar {
+        flex-wrap: nowrap;
+      }
+
+      #site-header #nav-menu {
+        width: auto !important;
+        flex-wrap: nowrap;
+      }
+
+      #site-header #nav-menu > :not([hidden]) ~ :not([hidden]) {
+        margin-left: 0.9rem !important;
       }
     }
 
@@ -800,7 +813,31 @@
           class="nav-link "
           
           href="/#section-resume-biography-3"
-        >Biography</a
+        >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#section-work"
+        >Moonshot(Kimi)</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#section-markdown"
+        >News</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#section-publications"
+        >Publication</a
         >
       </li>
       
@@ -814,7 +851,7 @@
           class="nav-link active"
           
           href="/awards-and-projects/"
-        >Awards &amp; Projects</a
+        >Projects</a
         >
       </li>
       <li class="nav-item">
@@ -1274,7 +1311,7 @@
 <div class="award-card w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   
   <a href="/publication/chartmoe/" target="_blank" rel="noopener">
-    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"><span class="oral-badge">🎤 ICLR 2025 Oral · Top 1.8%</span> - ChartMoE</h5>
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"><span class="oral-badge">ICLR 2025 Oral · Top 1.8%</span> - ChartMoE</h5>
   </a>
 
   <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
@@ -1442,39 +1479,7 @@
 
   
   <p class="powered-by text-center">
-    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
-  </p>
-  
-
-  <p class="powered-by footer-license-icons">
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
-      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
-      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
-      
-        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
-      
-      
-        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
-      
-    </a>
-  </p>
-
-
-
-
-
-  <p class="powered-by text-center">
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
-    
+    Cowork with Kimi <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>K3</span>
   </p>
 
 </footer>
