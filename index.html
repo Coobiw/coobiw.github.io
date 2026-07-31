@@ -402,6 +402,51 @@
       white-space: nowrap;
     }
 
+    .work-thumb {
+      display: block;
+      margin-top: 0.6rem;
+      cursor: zoom-in;
+    }
+
+    .work-thumb img {
+      width: 100%;
+      border: 1px solid rgba(133, 103, 71, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(133, 103, 71, 0.12);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .work-thumb:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 10px 24px rgba(133, 103, 71, 0.2);
+    }
+
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: rgba(40, 28, 16, 0.72);
+      backdrop-filter: blur(6px);
+      cursor: zoom-out;
+    }
+
+    .lightbox-overlay.open {
+      display: flex;
+    }
+
+    .lightbox-overlay img {
+      max-width: min(1100px, 94vw);
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    }
+
     .work-title {
       margin: 0;
       font-size: 1.35rem;
@@ -1490,7 +1535,11 @@
   <div class="work-list w-full">
 
     <div class="work-item">
-      <div class="work-year">2026.07</div>
+      <div class="work-year">2026.07
+        <span class="work-thumb">
+          <img src="/media/k3-figure8-vision-agentic.png" alt="K3 RL scaling curves: Agentic Chart Understanding &amp; Visual Puzzles highlighted" loading="lazy">
+        </span>
+      </div>
       <div class="work-body">
         <h3 class="work-title"><span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>Kimi K3</span></h3>
         <p class="work-desc">Open-weight flagship · Frontier Vision Agentic · 2.8T parameters · native multimodal · 1M context</p>
@@ -1510,7 +1559,11 @@
     </div>
 
     <div class="work-item">
-      <div class="work-year">2026.01 / 04</div>
+      <div class="work-year">2026.01 / 04
+        <span class="work-thumb">
+          <img src="/media/kimi-k2.5-zerovision-rl.jpeg" alt="K2.5 vision RL training curves on vision benchmarks" loading="lazy">
+        </span>
+      </div>
       <div class="work-body">
         <h3 class="work-title"><a href="/project/kimi-k2.5/"><span class="news-model">Kimi K2.5</span></a> / <a href="https://www.kimi.com/blog/kimi-k2-6" target="_blank" rel="noopener"><span class="news-model">K2.6</span></a></h3>
         <p class="work-desc">Kimi's First Unified Vision–Text Model -&gt; First Opensourced Frontier-level VTIR</p>
@@ -2458,6 +2511,34 @@
 
 
 
+
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+(function () {
+  var overlay = document.getElementById('lightbox');
+  var overlayImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.work-thumb').forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      var img = thumb.querySelector('img');
+      overlayImg.src = img.getAttribute('data-full') || img.src;
+      overlayImg.alt = img.alt;
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+    });
+  });
+  function closeLightbox() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    overlayImg.src = '';
+  }
+  overlay.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
+</script>
 
   </body>
 </html>
