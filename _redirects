@@ -1,3 +1,4 @@
 # Netlify redirects
 # Automatically generated
 # Documentation: https://docs.netlify.com/routing/redirects/
+/experience/*  /awards-and-projects/:splat  301

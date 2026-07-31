@@ -352,16 +352,47 @@
       width: min(calc(100% - 2rem), 1280px);
     }
 
-    #papers .section-content-card {
-      width: min(calc(100% - 3rem), 1100px);
-    }
-
     #section-publications .section-content-card {
       width: min(calc(100% - 3rem), 900px);
     }
 
-    #section-projects .section-content-card {
-      width: min(calc(100% - 3rem), 1100px);
+    .oral-badge {
+      display: inline-block;
+      padding: 0.18rem 0.75rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      color: #fff7ed;
+      background: linear-gradient(110deg, #b45309 15%, #d97706 35%, #fbbf24 50%, #d97706 65%, #b45309 85%);
+      background-size: 200% 100%;
+      animation: k3-shimmer 3.2s linear infinite;
+      box-shadow: 0 0 14px rgba(251, 191, 36, 0.5), 0 2px 6px rgba(0, 0, 0, 0.25);
+      text-shadow: 0 1px 2px rgba(120, 53, 15, 0.6);
+      white-space: nowrap;
+    }
+
+    .news-hot {
+      background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%);
+      border-left: 3px solid #3b82f6;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 4px;
+      animation: news-glow 3s ease-in-out infinite;
+    }
+
+    @keyframes news-glow {
+      0%, 100% { box-shadow: 0 0 6px rgba(59, 130, 246, 0.15); }
+      50% { box-shadow: 0 0 16px rgba(59, 130, 246, 0.4); }
+    }
+
+    .news-model {
+      font-weight: 700;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(110deg, #2563eb 15%, #38bdf8 35%, #a5f3fc 50%, #38bdf8 65%, #2563eb 85%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: k3-shimmer 3.2s linear infinite;
     }
 
     .page-header {
@@ -865,8 +896,8 @@
         <a
           class="nav-link "
           
-          href="/experience/"
-        >Experience</a
+          href="/awards-and-projects/"
+        >Awards &amp; Projects</a
         >
       </li>
       <li class="nav-item">
@@ -1178,14 +1209,13 @@
     <div class="pt-2 justify-content-center prose prose-slate dark:prose-invert" style="max-width:none;">
       <div class="bio-text" >
         <h2 id="about-me">About Me</h2>
-<p>👋Hi, I&rsquo;m Bowen(Brian) Qu, doing PostTrain at Moonshot.ai (<a href="https://www.kimi.com/" target="_blank" rel="noopener">Kimi</a>, 月之暗面). My research interests include MLLM, TIR(Tool-Integrated Reasoning) and Agentic RL. The logo of this website is my lovely cat - Baka (巴卡 in Chinese)!</p>
+<p>👋Hi, I&rsquo;m Bowen(Brian) Qu, a graduate of Peking University and MTS at Moonshot.ai (<a href="https://www.kimi.com/" target="_blank" rel="noopener">Kimi</a>, 月之暗面) Posttrain. My research interests include MLLM, TIR(Tool-Integrated Reasoning) and Agentic RL. The logo of this website is my lovely cat - Baka (巴卡 in Chinese)!</p>
 <ul>
-<li><strong>Education:</strong> I received my MPhil. degree at <a href="https://www.ece.pku.edu.cn/en/" target="_blank" rel="noopener">School of Electronic and Computer Science (SECE)</a>, <a href="https://english.pku.edu.cn/" target="_blank" rel="noopener">Peking University (PKU)</a>, in June, 2025. Previously, I received the Honours B.E. degree at <a href="http://ei.hust.edu.cn/" target="_blank" rel="noopener">School of Electronic Information and Communications (EIC)</a>, <a href="https://www.hust.edu.cn/" target="_blank" rel="noopener">Huazhong University of Science and Technology (HUST)</a> in June, 2022.</li>
 <li id="experience" style="scroll-margin-top: 6rem;"><strong>Experience:</strong> Fortunately, I have the honor to participate in some interesting MLLM research projects:
 <ul>
 <li>[2025.03 - Present] <strong>Moonshot.ai</strong>, Technical Staff (PostTrain). Cooking <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>K3</span> &amp; K2 series:
 <ul style="list-style:none; padding-left:1.2em;">
-<li>🔹 Vision <strong>Agentic</strong> RL (<strong><span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>K3</span> &amp; K2.6 - Visual Agent</strong>, Frontier-Level Vision TIR)</li>
+<li>🔹 Vision <strong>Agentic</strong> RL (<strong><span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>K3</span> &amp; K2.6 - Visual Agent</strong>, Frontier-Level Vision Agentic)</li>
 <li>🔹 Native Multimodal RL (<strong>K2.5 Report Chap2.2</strong>, ZeroVision ColdStart -> Vision-Centric RL)</li>
 <li>🔹 Chart Understanding and Chart-to-Code</li>
 </ul>
@@ -1222,15 +1252,11 @@
       <ul class="list-disc list-inside space-y-1 pl-5">
         
         <li>
-          Vision-Language Model(VLM)
+          Agentic RL
         </li>
         
         <li>
-          MLLM Reasoning
-        </li>
-        
-        <li>
-          Al-Generated Image/Video Quality Assesment
+          MLLM Reasoning, Knowledge and Perception
         </li>
         
       </ul>
@@ -1245,16 +1271,16 @@
         <li class="flex items-start gap-3">
           <svg style="" class='flex-shrink-0 w-5 h-5 me-2 mt-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41a60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a51.39 51.39 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
           <div class="description">
-            <p class="course">Master of Science</p>
-            <p class="text-sm">Peking University (PKU)</p>
+            <p class="course">M.S., Computer Science</p>
+            <p class="text-sm">Peking University (PKU), 2022-2025</p>
           </div>
         </li>
         
         <li class="flex items-start gap-3">
           <svg style="" class='flex-shrink-0 w-5 h-5 me-2 mt-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41a60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a51.39 51.39 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
           <div class="description">
-            <p class="course">Bachelor of Engineering</p>
-            <p class="text-sm">Huazhong University of Science and Technology (HUST)</p>
+            <p class="course">B.E., Electronic Engineering</p>
+            <p class="text-sm">Huazhong University of Science and Technology (HUST), 2018-2022</p>
           </div>
         </li>
         
@@ -1386,15 +1412,14 @@
 
 
   <div class="prose prose-slate lg:prose-xl dark:prose-invert w-full" style="max-width: none;"><ul>
-<li style="background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%); border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 6px; margin-bottom: 4px;">2026.04: 💥💥💥 We release <a href="https://www.kimi.com/blog/kimi-k2-6">Kimi-K2.6</a>❗️❗️❗️ Frontier-Level Vision TIR❗️❗️❗️ Visualize: <a href="/shows/k2.6_vtir/">K2.6 VTIR Trajectories</a></li>
-<li style="background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%); border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 6px; margin-bottom: 4px;">2026.01: 💥💥💥 We release <a href="/project/kimi-k2.5/">Kimi-K2.5</a>❗️❗️❗️<a href="https://github.com/MoonshotAI/Kimi-K2.5" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/MoonshotAI/Kimi-K2.5" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
-<li>2025.11: 💥 We release <a href="https://github.com/Coobiw/IE-Critic-R1" target="_blank" rel="noopener">IE-Critic-R1</a>, a MLLM specialized in assessing the quality of text-driven image editing results. It is a Pointwise, Generative Reward Model, leveraging CoT reasoning SFT and RLVR to provide accurate, human-aligned evaluations of image editing. <a href="https://github.com/Coobiw/IE-Critic-R1" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/Coobiw/IE-Critic-R1" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
-<li style="background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%); border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 6px; margin-bottom: 4px;">2025.07: 💥💥💥 We release <a href="https://github.com/MoonshotAI/Kimi-K2" target="_blank" rel="noopener">Kimi-K2</a>❗️❗️❗️<a href="https://github.com/MoonshotAI/Kimi-K2" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/MoonshotAI/Kimi-K2" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
-<li style="background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%); border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 6px; margin-bottom: 4px;">2025.02: 🎉🎉🎉 <a href="https://github.com/IDEA-FinAI/ChartMoE" target="_blank" rel="noopener">ChartMoE</a> is selected as ICLR2025 Oral(1.8%)! <a href="https://github.com/IDEA-FinAI/ChartMoE" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/IDEA-FinAI/ChartMoE" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
-<li>2025.01: 🎉🎉 <a href="https://github.com/IDEA-FinAI/ChartMoE" target="_blank" rel="noopener">ChartMoE</a> is accepted by ICLR2025!</li>
-<li style="background: linear-gradient(90deg, rgba(59,130,246,0.15) 0%, transparent 100%); border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 6px; margin-bottom: 4px;">2024.10:  🎉🎉 We release <a href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener">Aria</a>, a native LMM that excels on text, code, image, video, PDF and more! <a href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/rhymes-ai/Aria" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
-<li>2024.09: 💥💥 We release <a href="https://github.com/IDEA-FinAI/ChartMoE" target="_blank" rel="noopener">ChartMoE</a>, a MLLM with MoE connector, for advanced chart 1️⃣understanding, 2️⃣replot, 3️⃣editing, 4️⃣highlighting and 5️⃣transformation.</li>
-<li>2023.12: 💥 <a href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener">MPP-Qwen-Next</a> is released! <em><strong>Prevent poverty (24GB of VRAM) from limiting imagination.</strong></em> All 7B/14B llava-like training is conducted on RTX3090 GPUs by Pipeline Parallel. <a href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/Coobiw/MPP-LLaVA" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li class="news-hot">2026.07: We are releasing <a href="https://github.com/MoonshotAI/Kimi-K3" target="_blank" rel="noopener">Kimi <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>K3</span></a>, Open Frontier Intelligence, Frontier Vision Agentic! <a href="https://0715-soccer-goal-viewer.ok.kimi.link/" target="_blank" rel="noopener">Vision Agentic Showcase</a> <a href="https://github.com/MoonshotAI/Kimi-K3" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/MoonshotAI/Kimi-K3" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li class="news-hot">2026.04: We release <a href="https://www.kimi.com/blog/kimi-k2-6"><span class="news-model">Kimi-K2.6</span></a>: <strong>Frontier-Level Vision TIR</strong>! Visualize: <a href="/shows/k2.6_vtir/">K2.6 VTIR Trajectories</a></li>
+<li class="news-hot">2026.01: We release <a href="/project/kimi-k2.5/"><span class="news-model">Kimi-K2.5</span></a>! <a href="https://github.com/MoonshotAI/Kimi-K2.5" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/MoonshotAI/Kimi-K2.5" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li>2025.11: We release <a href="https://github.com/Coobiw/IE-Critic-R1" target="_blank" rel="noopener">IE-Critic-R1</a>, a Pointwise, Generative Reward Model optimized by RLVR, specialized in assessing the quality of text-driven image editing results. <a href="https://github.com/Coobiw/IE-Critic-R1" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/Coobiw/IE-Critic-R1" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li class="news-hot">2025.07: We release <a href="https://github.com/MoonshotAI/Kimi-K2" target="_blank" rel="noopener"><span class="news-model">Kimi-K2</span></a>! <a href="https://github.com/MoonshotAI/Kimi-K2" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/MoonshotAI/Kimi-K2" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li class="news-hot">2025.02: <a href="https://github.com/IDEA-FinAI/ChartMoE" target="_blank" rel="noopener">ChartMoE</a> is selected as <span class="oral-badge">🎤 ICLR 2025 Oral · Top 1.8%</span>. It is a MLLM with MoE connector, for advanced chart 1️⃣understanding, 2️⃣replot, 3️⃣editing, 4️⃣highlighting and 5️⃣transformation. <a href="https://github.com/IDEA-FinAI/ChartMoE" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/IDEA-FinAI/ChartMoE" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li class="news-hot">2024.10: We release <a href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener"><span class="news-model">Aria</span></a>, a native LMM that excels on text, code, image, video, PDF and more! <a href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/rhymes-ai/Aria" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
+<li>2023.12: Releasing personal project <a href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener">MPP-LLaVA</a> series, clean repo on LLaVA-like MLLM training, conducted on RTX3090 GPUs by Pipeline Parallel. <a href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/Coobiw/MPP-LLaVA" style="width: auto; height: 20px; vertical-align: top; display: inline; margin: 0 2px;"></a></li>
 </ul>
 </div>
 </div>
@@ -1492,288 +1517,6 @@
 
 
 
-<section id="papers" class="relative hbb-section blox-collection  " style="padding: 3rem 0 3rem 0;" >
- <div class="home-section-bg " >
-   
- </div>
-  
-
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-<div class="section-content-card">
-<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
-
-  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    Selected Outputs
-  </div>
-
-  <p>🌟 is me. * Equal Contribution (i.e.: Co-First Author). 📧 Corresponding Author.</p>
-</div>
-
-
-<div class="flex flex-col items-center px-6">
-
-  
-  
-
-
-<div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
-  <div class="grid gap-10 md:grid-cols-2 lg:gap-10">
-
-
-  
-    
-
-
-
-
-
-
-
-
-
-<div class="group cursor-pointer">
-
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="/project/kimi-k2.5/">
-
-      <img alt="Kimi-K2.5: Visual Agentic Intelligence"
-           class="object-fill transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/media/kimi-k2.5-zerovision-rl.jpeg"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="960"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/native-multimodal-rl/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Native Multimodal RL</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/project/kimi-k2.5/"><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Kimi-K2.5: Visual Agentic Intelligence
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/project/kimi-k2.5/">
-        Kimi-K2.5 is Moonshot's most powerful native multimodal agentic model (1T params, 32B activated). I led the Native Multimodal RL effort (K2.5 Report Chap2.2): ZeroVision ColdStart &rarr; Vision-Centric RL, plus Vision Reasoning &amp; Knowledge &amp; TIR RL.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2025-03-27">Mar 27, 2025</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="group cursor-pointer">
-
-  
-  
-  
-    
-  
-  
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="/publication/chartmoe/" >
-
-      <img alt="ChartMoE: Mixture of Diversely Aligned Expert Connector for Chart Understanding"
-           class="object-fill transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/publication/chartmoe/featured_hu_16ca23b401810ab3.webp"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="960"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/moe-in-downstream-tasks/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">MoE in Downstream Tasks</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/publication/chartmoe/" ><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">ChartMoE: Mixture of Diversely Aligned Expert Connector for Chart Understanding
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/publication/chartmoe/" >
-        ChartMoE is a multimodal large language model with Mixture-of-Expert connector for advanced chart 1️⃣understanding, 2️⃣replot, 3️⃣editing, 4️⃣highlighting and 5️⃣transformation.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2025-01-22">Jan 22, 2025</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-<div class="group cursor-pointer">
-
-  
-  
-  
-    
-  
-  
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="/publication/aria/" >
-
-      <img alt="Aria: An Open Multimodal Native Mixture-of-Experts Model"
-           class="object-fill transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/publication/aria/featured_hu_3b62990a16dc9b8c.webp"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="960"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/multimodal-native-moe/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Multimodal Native MoE</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/publication/aria/" ><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Aria: An Open Multimodal Native Mixture-of-Experts Model
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/publication/aria/" >
-        Aria is a multimodal native MoE model. It features：1️⃣State-of-the-art performance on various multimodal and language tasks, superior in video and document understanding; 2️⃣Long multimodal context window of 64K tokens; 3️⃣3.9B activated parameters per token, enabling fast inference speed and low fine-tuning cost.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2024-10-05">Oct 5, 2024</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-  
-
-    </div>
-</div>
-
-
-</div>
-</div>
-
-
-
-
-
-
-  
-
-  
-</section>
 
   
 
@@ -1928,10 +1671,10 @@
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    Core-Authored Publications
+    Selected Publication
   </div>
 
-  <p>🌟 is me. * Equal Contribution (i.e.: Co-First Author). 📧 Corresponding Author.</p>
+  <p>* Equal Contribution (i.e.: Co-First Author). 📧 Corresponding Author.</p>
 </div>
 
 
@@ -1957,7 +1700,47 @@
     
 
   <span >
-      &#127775;Bowen Qu</span>, <span >
+      Zichao Lin*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
+      Yifeng Xie*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>Bowen Qu*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
+      Haiming Wang</span>, <span >
+      Jia Li</span>, <span >
+      Haoning Wu</span>, <span >
+      Yuhao Dong</span>, <span >
+      Zuhao Yang</span>, <span >
+      Jinguo Zhu</span>, <span >
+      Haoyu Lu</span>, etc.
+  </span>
+  (Moonshot AI, 2026).
+  <a href="https://arxiv.org/abs/2607.24957" target="_blank" rel="noopener" class="underline">PerceptionBench: Evaluating Atomic Visual Perception in Multimodal Large Language Models</a>.
+  arXiv preprint.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+<a class="hb-attachment-link hb-attachment-small" href="https://arxiv.org/abs/2607.24957" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+  </div>
+
+
+
+</div>
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>Bowen Qu</span>, <span >
       Shangkun Sun</span>, <span >
       Xiaoyu Liang</span>, <span >
       Wei Gao&#128231;</span>
@@ -2019,8 +1802,7 @@
 
 
   <span >
-      Zhengzuo Xu*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
-      🌟Bowen Qu*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
+      Zhengzuo Xu*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>Bowen Qu*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
       Yiyan Qi*</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
       Sinan Du</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Author"></i>, <span >
       Chengjin Xu</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Author"></i>, <span >
@@ -2029,7 +1811,7 @@
   </span>
   (2025).
   <a href="/publication/chartmoe/" class="underline">ChartMoE: Mixture of Diversely Aligned Expert Connector for Chart Understanding</a>.
-  ICLR2025 Oral (1.8%).
+  <span class="oral-badge">🎤 ICLR 2025 Oral · Top 1.8%</span>
   
 
   
@@ -2134,8 +1916,7 @@
       Yudong Liu</span>, <span >
       Haoning Wu</span>, <span >
       Yue Wang</span>, <span >
-      Zhiqi Shen</span>, <span >
-      🌟Bowen Qu</span>, <span >
+      Zhiqi Shen</span>, <span class="k3-glow"><i class="k3-p"></i><i class="k3-p"></i><i class="k3-p"></i>Bowen Qu</span>, <span >
       Xinyao Niu</span>, <span >
       Fan Zhou</span>, <span >
       Chengen Huang</span>, <span >
@@ -2151,7 +1932,7 @@
       Bei Chen</span>, <span >
       Junnan Li📧</span>
   </span>
-  (2024).
+  (01.AI &amp; Rhymes.AI, 2024).
   <a href="/publication/aria/" class="underline">Aria: An Open Multimodal Native Mixture-of-Experts Model</a>.
   Technical Report.
   
@@ -2244,183 +2025,6 @@
     
 
 
-<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="article-metadata li-cite-author">
-    
-
-  <span >
-      🌟Bowen Qu</span>, <span >
-      Xiaoyu Liang</span>, <span >
-      Shangkun Sun</span>, <span >
-      Wei Gao📧</span>
-  </span>
-  (2024).
-  <a href="/publication/trivqa/" class="underline">Exploring AIGC Video Quality: A Focus on Visual Harmony, Video-Text Consistency and Domain Distribution Gap</a>.
-  CVPRW2024.
-  
-
-  
-  <div class="flex flex-wrap space-x-3">
-    
-
-
-
-
-
-
-
-
-  
-
-
-
-<a class="hb-attachment-link hb-attachment-small" href="/publication/trivqa/trivqa.pdf" target="_blank" rel="noopener">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
-  PDF
-</a>
-
-
-
-<a class="hb-attachment-link hb-attachment-small" href="/publication/trivqa/cite.bib" target="_blank" data-filename="/publication/trivqa/cite.bib">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
-  Cite
-</a>
-
-
-  
-  
-    
-  
-<a class="hb-attachment-link hb-attachment-small" href="https://github.com/Coobiw/TriVQA" target="_blank" rel="noopener">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
-  Code
-</a>
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="hb-attachment-link hb-attachment-small" href="https://github.com/Coobiw/TriVQA/blob/master/poster.pdf" target="_blank" rel="noopener">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5m10.5-11.25h.008v.008h-.008zm.375 0a.375.375 0 1 1-.75 0a.375.375 0 0 1 .75 0"/></svg>
-  Poster
-</a>
-
-
-
-
-
-
-
-
-
-  </div>
-  
-
-  
-  
-</div>
-
-  
-    
-
-
-<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-  
-  
-
-  <span class="article-metadata li-cite-author">
-    
-
-  <span >
-      🌟Bowen Qu*</span>, <span >
-      Haohui Li*</span>, <span >
-      Wei Gao📧</span>
-  </span>
-  (2024).
-  <a href="/publication/ipiqa/" class="underline">Bringing Textual Prompt to AI-Generated Image Quality Assessment</a>.
-  ICME2024.
-  
-
-  
-  <div class="flex flex-wrap space-x-3">
-    
-
-
-
-
-
-
-
-
-  
-
-
-
-<a class="hb-attachment-link hb-attachment-small" href="/publication/ipiqa/ipiqa.pdf" target="_blank" rel="noopener">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
-  PDF
-</a>
-
-
-
-<a class="hb-attachment-link hb-attachment-small" href="/publication/ipiqa/cite.bib" target="_blank" data-filename="/publication/ipiqa/cite.bib">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
-  Cite
-</a>
-
-
-  
-  
-    
-  
-<a class="hb-attachment-link hb-attachment-small" href="https://github.com/Coobiw/IP-IQA" target="_blank" rel="noopener">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
-  Code
-</a>
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="hb-attachment-link hb-attachment-small" href="https://github.com/Coobiw/IP-IQA/blob/master/assets/poster.pdf" target="_blank" rel="noopener">
-  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5m10.5-11.25h.008v.008h-.008zm.375 0a.375.375 0 1 1-.75 0a.375.375 0 0 1 .75 0"/></svg>
-  Poster
-</a>
-
-
-
-
-
-
-
-
-
-  </div>
-  
-
-  
-  
-</div>
-
-  
-
   </div>
 </div>
 
@@ -2524,340 +2128,6 @@
 
 
 
-<section id="section-projects" class="relative hbb-section blox-collection  " style="padding: 3rem 0 3rem 0;" >
- <div class="home-section-bg " >
-   
- </div>
-  
-
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-<div class="section-content-card">
-<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
-
-  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    Selected Projects
-  </div>
-
-  <p>😺 I enjoy open-sourcing. Here are a selection of projects that I&rsquo;ve led or served as the core contributor.</p>
-</div>
-
-
-<div class="flex flex-col items-center px-6">
-
-  
-  
-
-
-<div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
-  <div class="grid gap-10 md:grid-cols-2 lg:gap-10">
-
-
-  
-    
-
-
-
-
-
-
-
-
-  
-  
-
-
-<div class="group cursor-pointer">
-
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="/project/kimi-k2.5/">
-
-      <img alt="Kimi-K2.5"
-           class="object-contain transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/media/kimi-k2.5-zerovision-rl.jpeg"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="960"></a>
-  </div>
-
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-
-        <a href="/tags/native-multimodal-rl/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Native Multimodal RL</span></a>
-
-      </div>
-
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/project/kimi-k2.5/"><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Kimi-K2.5
-          </span></a>
-      </h2>
-
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/project/kimi-k2.5/">
-        Moonshot's most powerful native multimodal agentic model. I led the Native Multimodal RL (K2.5 Report Chap2.2): ZeroVision ColdStart &rarr; Vision-Centric RL, Vision Reasoning &amp; TIR RL, and Chart Understanding.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2025-03-27">Mar 27, 2025</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="group cursor-pointer">
-
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="https://github.com/openclaw/openclaw/pull/45254" target="_blank" rel="noopener">
-
-      <img alt="OpenClaw"
-           class="object-contain transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="https://opengraph.githubassets.com/1/openclaw/openclaw"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="960"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/open-source-contribution/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Open Source Contribution</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="https://github.com/openclaw/openclaw/pull/45254" target="_blank" rel="noopener"><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">OpenClaw Contributor (Merged PR #45254)<svg style="height: 1em;" class="inline-flex h-6 w-6 pl-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="https://github.com/openclaw/openclaw/pull/45254" target="_blank" rel="noopener">
-        fix(feishu): Fetch thread context so AI can see bot replies in topic threads. Added full thread history retrieval via Feishu's container_id_type=thread API for proper multi-turn awareness.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2025-03-27">Mar 27, 2025</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-  
-  
-
-
-<div class="group cursor-pointer">
-
-  
-  
-  
-    
-  
-  
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener">
-
-      <img alt="Aria (1000&#43; ⭐)"
-           class="object-contain transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/project/aria/featured_hu_360013b6ad74e55f.webp"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="925"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/native-multimodal-moe/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Native Multimodal MoE</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener"><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Aria (1000&#43; ⭐)<svg style="height: 1em;" class="inline-flex h-6 w-6 pl-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="https://github.com/rhymes-ai/Aria" target="_blank" rel="noopener">
-        Aria is a multimodal native MoE model. It features：1️⃣State-of-the-art performance on various multimodal and language tasks, superior in video and document understanding; 2️⃣Long multimodal context window of 64K tokens; 3️⃣3.9B activated parameters per token, enabling fast inference speed and low fine-tuning cost.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2024-10-10">Oct 10, 2024</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-  
-
-
-<div class="group cursor-pointer">
-
-  
-  
-  
-    
-  
-  
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener">
-
-      <img alt="MPP-Qwen-Next (600&#43; ⭐)"
-           class="object-contain transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/project/mpp-llava/featured_hu_c8b9ef0cd79f4c00.webp"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="540"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/mllm-training-framework-supporting-multimodal-pipeline-parallel/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">MLLM Training Framework (Supporting Multimodal Pipeline Parallel)</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener"><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">MPP-Qwen-Next (600&#43; ⭐)<svg style="height: 1em;" class="inline-flex h-6 w-6 pl-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="https://github.com/Coobiw/MPP-LLaVA" target="_blank" rel="noopener">
-        The Repo supports {video/image/multi-image} {single/multi-turn} conversations. All 7B/14B llava-like training is conducted on 3090/4090 GPUs. To prevent poverty (24GB of VRAM) from limiting imagination, I implemented an MLLM version based on deepspeed Pipeline Parallel.</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
-          
-          
-          <time class="truncate text-sm" datetime="2023-12-25">Dec 25, 2023</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-    </div>
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-  
-
-  
-</section>
 
   
 
