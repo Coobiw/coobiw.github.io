@@ -1409,9 +1409,7 @@
   </div>
 
   <div id="visitor-globe" class="mt-6" style="display:none">
-    <div class="flex justify-center">
-      <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=Vb6PcO-eZxSWeUIbGonnKJPmIff5Vegq4BxFXd8A67w" onload="document.getElementById('visitor-globe').style.display='block'"></script>
-    </div>
+    <div class="flex justify-center" id="visitor-globe-slot"></div>
     <p id="visitor-range" class="text-xs text-gray-400 mt-1 text-center"></p>
   </div>
   <script>
@@ -1424,6 +1422,17 @@
       }
       var fmt = function(d) { return d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate(); };
       document.getElementById('visitor-range').textContent = 'visitors (' + fmt(prev) + ' - ' + fmt(now) + ')';
+
+      // MapMyVisitors 的统计按 key 绑定的域名归属，这里按当前访问域名选用对应 key
+      var mmvKey = /(^|\.)coobiw\.site$/.test(location.hostname)
+        ? 'v4ebT5lrBXHj8P6hEVUt-SGTiL0iZEobhRs2tRQ0fAA'   // coobiw.site
+        : 'Vb6PcO-eZxSWeUIbGonnKJPmIff5Vegq4BxFXd8A67w'; // coobiw.github.io
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'mmvst_globe';
+      s.src = '//mapmyvisitors.com/globe.js?d=' + mmvKey;
+      s.onload = function() { document.getElementById('visitor-globe').style.display = 'block'; };
+      document.getElementById('visitor-globe-slot').appendChild(s);
     })();
   </script>
 
