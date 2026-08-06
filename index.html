@@ -2721,20 +2721,16 @@
 <script>
 // 单页导航 scrollspy：点击/滚动/初始 hash 时切换导航选中态
 (function () {
-  // 旧锚点 id 兼容（不新增 DOM 元素，避免破坏 section 的子元素选择器样式）
+  // 旧锚点 id 兼容：映射到新 id（不新增 DOM 元素，避免破坏 section 的子元素选择器样式）
   var compat = {
     'section-resume-biography-3': 'home',
     'section-work': 'moonshot(kimi)',
     'section-markdown': 'news',
     'section-publications': 'publication'
   };
-  var oldId = location.hash.slice(1);
-  if (compat[oldId]) {
-    var compatTarget = document.getElementById(compat[oldId]);
-    if (compatTarget) {
-      setTimeout(function () { compatTarget.scrollIntoView(); }, 0);
-    }
-  }
+  var rawHash = location.hash.slice(1);
+  var isOldHash = !!compat[rawHash];
+  var hash = isOldHash ? compat[rawHash] : rawHash;
 
   var links = Array.prototype.slice.call(document.querySelectorAll('#nav-menu a.nav-link'));
   var items = links.map(function (a) {
@@ -2774,8 +2770,18 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  var initial = items.filter(function (i) { return location.hash === '#' + i.el.id; })[0];
+  var initial = items.filter(function (i) { return hash === i.el.id; })[0];
   setActive(initial || items[0]);
+  // 旧式 hash 浏览器找不到对应元素，需要 JS 代为滚动定位；
+  // 等 load 之后再滚，否则会被浏览器加载完成时的 hash 处理（找不到元素回滚到顶部）覆盖
+  if (initial && isOldHash) {
+    var scrollToSection = function () { initial.el.scrollIntoView(); };
+    if (document.readyState === 'complete') {
+      scrollToSection();
+    } else {
+      window.addEventListener('load', function () { setTimeout(scrollToSection, 50); });
+    }
+  }
 })();
 </script>
 
