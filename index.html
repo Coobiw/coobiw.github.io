@@ -244,11 +244,11 @@
       background: linear-gradient(180deg, rgba(250, 246, 238, 0.96), rgba(245, 238, 227, 0.96));
     }
 
-    #section-resume-biography-3 {
+    #home {
       overflow: visible;
     }
 
-    #section-resume-biography-3 .home-section-bg.bg-image {
+    #home .home-section-bg.bg-image {
       background-image:
         radial-gradient(circle at 20% 22%, rgba(217, 164, 65, 0.14), transparent 18%),
         radial-gradient(circle at 76% 18%, rgba(180, 140, 90, 0.12), transparent 16%),
@@ -261,11 +261,11 @@
       transform: scale(1.02);
     }
 
-    #section-resume-biography-3 .resume-biography {
+    #home .resume-biography {
       align-items: flex-start;
     }
 
-    #section-resume-biography-3 #profile {
+    #home #profile {
       width: min(100%, 240px);
       padding: 1.25rem 1rem 1rem;
       border: 1px solid rgba(133, 103, 71, 0.16);
@@ -275,26 +275,26 @@
       backdrop-filter: blur(10px);
     }
 
-    #section-resume-biography-3 .avatar-wrapper {
+    #home .avatar-wrapper {
       margin-top: 0;
     }
 
-    #section-resume-biography-3 .avatar {
+    #home .avatar {
       width: 160px;
       height: 160px;
     }
 
-    #section-resume-biography-3 .network-icon {
+    #home .network-icon {
       gap: 0.45rem;
       margin-top: 0.35rem;
       flex-wrap: nowrap;
     }
 
-    #section-resume-biography-3 .network-icon svg {
+    #home .network-icon svg {
       height: 1.25rem !important;
     }
 
-    #section-resume-biography-3 .network-icon .wechat-btn {
+    #home .network-icon .wechat-btn {
       display: inline-flex;
       align-items: center;
       padding: 0;
@@ -304,7 +304,7 @@
       cursor: pointer;
     }
 
-    #section-resume-biography-3 .resume-biography > .flex-auto {
+    #home .resume-biography > .flex-auto {
       width: 100%;
       margin-top: 0;
       padding: clamp(1.4rem, 2.6vw, 2.3rem);
@@ -315,34 +315,34 @@
       backdrop-filter: blur(12px);
     }
 
-    #section-resume-biography-3 .bio-text {
+    #home .bio-text {
       max-width: 80ch;
     }
 
-    #section-resume-biography-3 .bio-text h2 {
+    #home .bio-text h2 {
       margin-top: 0;
       margin-bottom: 1rem;
       font-size: clamp(2rem, 3vw, 2.35rem);
       line-height: 1.1;
     }
 
-    #section-resume-biography-3 .bio-text p,
-    #section-resume-biography-3 .bio-text li {
+    #home .bio-text p,
+    #home .bio-text li {
       line-height: 1.8;
     }
 
-    #section-resume-biography-3 .bio-text > ul {
+    #home .bio-text > ul {
       margin-top: 1rem;
       padding-left: 1.25rem;
     }
 
-    #section-resume-biography-3 .grid {
+    #home .grid {
       margin-top: 1.9rem;
       padding-top: 1.4rem;
       border-top: 1px solid rgba(133, 103, 71, 0.16);
     }
 
-    #section-resume-biography-3 .section-subheading {
+    #home .section-subheading {
       font-size: 1.35rem;
     }
 
@@ -356,15 +356,15 @@
       backdrop-filter: blur(10px);
     }
 
-    #section-markdown .section-content-card {
+    #news .section-content-card {
       width: min(calc(100% - 2rem), 1280px);
     }
 
-    #section-publications .section-content-card {
+    #publication .section-content-card {
       width: min(calc(100% - 2rem), 1280px);
     }
 
-    #section-work .section-content-card {
+    #moonshot\(kimi\) .section-content-card {
       width: min(calc(100% - 2rem), 1280px);
     }
 
@@ -659,23 +659,23 @@
     }
 
     @media (min-width: 768px) {
-      #section-resume-biography-3 .resume-biography {
+      #home .resume-biography {
         max-width: 1360px;
         gap: clamp(3.2rem, 5vw, 4.75rem);
         padding-left: clamp(2rem, 4vw, 3.5rem);
         padding-right: clamp(1.75rem, 3vw, 3rem);
       }
 
-      #section-resume-biography-3 .resume-biography > .flex-none {
+      #home .resume-biography > .flex-none {
         flex: 0 0 248px;
       }
 
-      #section-resume-biography-3 .resume-biography > .flex-auto {
+      #home .resume-biography > .flex-auto {
         flex: 1 1 0;
         min-width: 0;
       }
 
-      #section-resume-biography-3 .bio-text {
+      #home .bio-text {
         max-width: 86ch;
       }
     }
@@ -1256,7 +1256,6 @@
 
 
 <section id="home" class="relative hbb-section blox-resume-biography-3 " style="padding: 3rem 0 3rem 0;" >
-<span id="section-resume-biography-3"></span>
  <div class="home-section-bg  bg-image">
    
  </div>
@@ -1531,7 +1530,6 @@
   
 </section>
 <section id="moonshot(kimi)" class="relative hbb-section blox-markdown  " style="padding: 3rem 0 3rem 0;" >
-<span id="section-work"></span>
  <div class="home-section-bg " >
 
  </div>
@@ -1687,7 +1685,6 @@
 
 
 <section id="news" class="relative hbb-section blox-markdown  " style="padding: 3rem 0 3rem 0;" >
-<span id="section-markdown"></span>
  <div class="home-section-bg " >
    
  </div>
@@ -1907,7 +1904,6 @@
 
 
 <section id="publication" class="relative hbb-section blox-collection  " style="padding: 3rem 0 3rem 0;" >
-<span id="section-publications"></span>
  <div class="home-section-bg " >
    
  </div>
@@ -2725,6 +2721,21 @@
 <script>
 // 单页导航 scrollspy：点击/滚动/初始 hash 时切换导航选中态
 (function () {
+  // 旧锚点 id 兼容（不新增 DOM 元素，避免破坏 section 的子元素选择器样式）
+  var compat = {
+    'section-resume-biography-3': 'home',
+    'section-work': 'moonshot(kimi)',
+    'section-markdown': 'news',
+    'section-publications': 'publication'
+  };
+  var oldId = location.hash.slice(1);
+  if (compat[oldId]) {
+    var compatTarget = document.getElementById(compat[oldId]);
+    if (compatTarget) {
+      setTimeout(function () { compatTarget.scrollIntoView(); }, 0);
+    }
+  }
+
   var links = Array.prototype.slice.call(document.querySelectorAll('#nav-menu a.nav-link'));
   var items = links.map(function (a) {
     var m = (a.getAttribute('href') || '').match(/\/#(.+)$/);
