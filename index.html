@@ -1076,7 +1076,7 @@
         <a
           class="nav-link active"
           
-          href="/#section-resume-biography-3"
+          href="/#home"
         >Home</a
         >
       </li>
@@ -1084,7 +1084,7 @@
         <a
           class="nav-link "
           
-          href="/#section-work"
+          href="/#moonshot(kimi)"
         >Moonshot(Kimi)</a
         >
       </li>
@@ -1092,7 +1092,7 @@
         <a
           class="nav-link "
           
-          href="/#section-markdown"
+          href="/#news"
         >News</a
         >
       </li>
@@ -1100,7 +1100,7 @@
         <a
           class="nav-link "
           
-          href="/#section-publications"
+          href="/#publication"
         >Publication</a
         >
       </li>
@@ -1255,7 +1255,8 @@
 
 
 
-<section id="section-resume-biography-3" class="relative hbb-section blox-resume-biography-3 " style="padding: 3rem 0 3rem 0;" >
+<section id="home" class="relative hbb-section blox-resume-biography-3 " style="padding: 3rem 0 3rem 0;" >
+<span id="section-resume-biography-3"></span>
  <div class="home-section-bg  bg-image">
    
  </div>
@@ -1529,7 +1530,8 @@
 
   
 </section>
-<section id="section-work" class="relative hbb-section blox-markdown  " style="padding: 3rem 0 3rem 0;" >
+<section id="moonshot(kimi)" class="relative hbb-section blox-markdown  " style="padding: 3rem 0 3rem 0;" >
+<span id="section-work"></span>
  <div class="home-section-bg " >
 
  </div>
@@ -1684,7 +1686,8 @@
 
 
 
-<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 3rem 0 3rem 0;" >
+<section id="news" class="relative hbb-section blox-markdown  " style="padding: 3rem 0 3rem 0;" >
+<span id="section-markdown"></span>
  <div class="home-section-bg " >
    
  </div>
@@ -1903,7 +1906,8 @@
 
 
 
-<section id="section-publications" class="relative hbb-section blox-collection  " style="padding: 3rem 0 3rem 0;" >
+<section id="publication" class="relative hbb-section blox-collection  " style="padding: 3rem 0 3rem 0;" >
+<span id="section-publications"></span>
  <div class="home-section-bg " >
    
  </div>
@@ -2715,6 +2719,52 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeLightbox();
   });
+})();
+</script>
+
+<script>
+// 单页导航 scrollspy：点击/滚动/初始 hash 时切换导航选中态
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('#nav-menu a.nav-link'));
+  var items = links.map(function (a) {
+    var m = (a.getAttribute('href') || '').match(/\/#(.+)$/);
+    if (!m) return null;
+    var el = document.getElementById(m[1]);
+    return el ? { a: a, el: el } : null;
+  }).filter(Boolean);
+  if (!items.length) return;
+
+  function setActive(item) {
+    links.forEach(function (a) { a.classList.remove('active'); });
+    if (item) item.a.classList.add('active');
+  }
+  items.forEach(function (item) {
+    item.a.addEventListener('click', function () { setActive(item); });
+  });
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      var pos = window.scrollY + window.innerHeight * 0.35;
+      var current = items[0];
+      items.forEach(function (item) {
+        var top = item.el.getBoundingClientRect().top + window.scrollY;
+        if (top <= pos) current = item;
+      });
+      // 滚到页面底部时锁定最后一项
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+        current = items[items.length - 1];
+      }
+      setActive(current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var initial = items.filter(function (i) { return location.hash === '#' + i.el.id; })[0];
+  setActive(initial || items[0]);
 })();
 </script>
 
