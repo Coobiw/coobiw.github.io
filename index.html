@@ -1423,14 +1423,11 @@
       var fmt = function(d) { return d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate(); };
       document.getElementById('visitor-range').textContent = 'visitors (' + fmt(prev) + ' - ' + fmt(now) + ')';
 
-      // MapMyVisitors 的统计按 key 绑定的域名归属，这里按当前访问域名选用对应 key
-      var mmvKey = /(^|\.)coobiw\.site$/.test(location.hostname)
-        ? 'v4ebT5lrBXHj8P6hEVUt-SGTiL0iZEobhRs2tRQ0fAA'   // coobiw.site
-        : 'Vb6PcO-eZxSWeUIbGonnKJPmIff5Vegq4BxFXd8A67w'; // coobiw.github.io
+      // MapMyVisitors 统计按 key 归属：两个域名共用同一个 key，地球仪和统计合并为一份
       var s = document.createElement('script');
       s.type = 'text/javascript';
       s.id = 'mmvst_globe';
-      s.src = '//mapmyvisitors.com/globe.js?d=' + mmvKey;
+      s.src = '//mapmyvisitors.com/globe.js?d=Vb6PcO-eZxSWeUIbGonnKJPmIff5Vegq4BxFXd8A67w';
       s.onload = function() { document.getElementById('visitor-globe').style.display = 'block'; };
       document.getElementById('visitor-globe-slot').appendChild(s);
     })();
