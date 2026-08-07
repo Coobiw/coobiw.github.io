@@ -16,3 +16,16 @@
 .nav-link.active{font-weight:700;color:rgb(var(--color-primary-700))}
 :is(.dark .nav-link.active){color:rgb(var(--color-primary-300))}
 .hbb-section{scroll-margin-top:5rem}
+
+/* WeChat button: instant custom tooltip (replaces slow native title tooltip) */
+.wechat-btn{position:relative}
+.wechat-btn::after{
+  content:attr(data-tip);
+  position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);
+  background:#1f2937;color:#fff;padding:.3rem .6rem;border-radius:.4rem;
+  font-size:.75rem;line-height:1.2;white-space:nowrap;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .1s ease;
+}
+.wechat-btn:hover::after{opacity:1;visibility:visible}
+:is(.dark .wechat-btn)::after{background:#e5e7eb;color:#111827}
