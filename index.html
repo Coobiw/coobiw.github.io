@@ -2749,24 +2749,23 @@
     item.a.addEventListener('click', function () { setActive(item); });
   });
 
-  var ticking = false;
+  // 用时间戳节流而不是 requestAnimationFrame —— 后台标签页 rAF 会被暂停，选中态会卡死
+  var lastRun = 0;
   function onScroll() {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function () {
-      ticking = false;
-      var pos = window.scrollY + window.innerHeight * 0.35;
-      var current = items[0];
-      items.forEach(function (item) {
-        var top = item.el.getBoundingClientRect().top + window.scrollY;
-        if (top <= pos) current = item;
-      });
-      // 滚到页面底部时锁定最后一项
-      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
-        current = items[items.length - 1];
-      }
-      setActive(current);
+    var now = Date.now();
+    if (now - lastRun < 100) return;
+    lastRun = now;
+    var pos = window.scrollY + window.innerHeight * 0.35;
+    var current = items[0];
+    items.forEach(function (item) {
+      var top = item.el.getBoundingClientRect().top + window.scrollY;
+      if (top <= pos) current = item;
     });
+    // 滚到页面底部时锁定最后一项
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+      current = items[items.length - 1];
+    }
+    setActive(current);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
